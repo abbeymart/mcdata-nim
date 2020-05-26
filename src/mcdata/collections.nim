@@ -30,6 +30,7 @@ type
 # Generic filter function - using Predicate type
 proc filterFunc*[T, U](arr: seq[T], filterFn: U): seq[T] =
     # functional style
+    # result = arr.filter((x:T)->bool => filterFn(x))
     result = arr.filter(it => filterFn(it))
 
 # Integer filter function - using IPredicate type
