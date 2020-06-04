@@ -5,6 +5,7 @@ author        = "Abi Akindele [abbeymart]"
 description   = "Data analytics, ETL, statistics and machine-learning functions"
 license       = "MIT"
 srcDir        = "src"
+skipFiles     = @["project.md"]
 
 
 

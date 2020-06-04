@@ -1,4 +1,5 @@
 test2.nim
 project.md
-
+*.exe
 config/secure
+mcdata.exe

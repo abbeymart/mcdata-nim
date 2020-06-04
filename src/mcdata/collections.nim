@@ -12,18 +12,18 @@ import sequtils, sugar
   Predicate, Function, Operation, Consumer, Supplier etc.
   ]##
 type
-    IPredicate* = proc(val: int): bool
-    StringPredicate* = proc(val: string): bool
-    Predicate*[T] = proc(val: T): bool
-    BinaryPredicate*[T, U] = proc(val1: T, val2: U ): bool
-    UnaryOperator*[T] = proc(val: T): T
-    BinaryOperator*[T] = proc(val1, val2: T): T
-    Function*[T, R] = proc(val: T): R
-    BiFunction*[T, U, R] = proc(val1: T, val2: U): R
-    Consumer*[T] = proc(val: T)
-    BiConsumer*[T, U] = proc(val1: T, val2: U)
-    Supplier*[R] = proc(): R
-    Comparator*[T] = proc(val1: T, val2: T): int
+    IPredicate* = proc(val: int): bool {.closure.} # {.closure.} is default to proc type
+    StringPredicate* = proc(val: string): bool {.closure.} 
+    Predicate*[T] = proc(val: T): bool {.closure.} 
+    BinaryPredicate*[T, U] = proc(val1: T, val2: U ): bool {.closure.} 
+    UnaryOperator*[T] = proc(val: T): T {.closure.} 
+    BinaryOperator*[T] = proc(val1, val2: T): T {.closure.} 
+    Function*[T, R] = proc(val: T): R {.closure.} 
+    BiFunction*[T, U, R] = proc(val1: T, val2: U): R {.closure.} 
+    Consumer*[T] = proc(val: T) {.closure.} 
+    BiConsumer*[T, U] = proc(val1: T, val2: U) {.closure.} 
+    Supplier*[R] = proc(): R {.closure.} 
+    Comparator*[T] = proc(val1: T, val2: T): int {.closure.} 
 
 # Collection procedures/functions - overloaded procedures
 
